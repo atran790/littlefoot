@@ -42,10 +42,10 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: October 13, 2026</p>
+        <p class="updated">Last updated: October 14, 2026</p>
 
         <h2>Overview</h2>
-        <p>LittleFoot Baby ("the App") is published by Pomegranate Planning, LLC ("we", "us"). The App is built so your family's information stays on your device. We don't run servers for the App, we don't require an account, and we never receive the information you enter.</p>
+        <p>LittleFoot Baby ("the App") is published by Pomegranate Planning, LLC ("we", "us"). The App is built so your family's information stays on your device. We don't require an account. The one exception is the Product Scanner, which sends label photos through our scan server to OpenAI to read them, as described below.</p>
 
         <h2>Information Stored on Your Device</h2>
         <p>To work, the App stores the information you choose to enter, only on your device:</p>
@@ -57,18 +57,21 @@
             <li>Any feeding or sleep timer you start. While it runs, its start time can appear on your Lock Screen as a Live Activity.</li>
             <li>Results from the AI features: cry analysis results, diaper check photos and results, and product label photos, label text, and results.</li>
         </ul>
-        <p>This information is not sent to us. It is not shared with anyone else, except as noted under AI Features. It may be included in your device backups (for example iCloud Backup), which Apple manages under its own privacy policy.</p>
+        <p>This information is not sent to us. It is not shared with anyone else, except as noted under AI Features and Product Scanner. It may be included in your device backups (for example iCloud Backup), which Apple manages under its own privacy policy.</p>
 
         <h2>Microphone</h2>
         <p>The Cry Analyzer uses the microphone only while you are recording. The audio is analyzed in real time on your device and is never saved or sent anywhere. Only the analysis results are kept, on your device.</p>
 
         <h2>Camera and Photos</h2>
-        <p>The App uses the camera or your photo library only when you take or choose a photo: a profile photo, a diaper check, or a product label scan. Photos are processed on your device and saved only in the App on your device. They are never uploaded. Links to brand websites and web searches in scan reports open in your browser only when you tap them.</p>
+        <p>The App uses the camera or your photo library only when you take or choose a photo: a profile photo, a diaper check, or a product label scan. Profile and diaper check photos are processed on your device and are never uploaded. Product label photos are sent to OpenAI to read the label (see Product Scanner) and are saved in the App on your device. Links to brand websites and web searches in scan reports open in your browser only when you tap them.</p>
 
         <h2>AI Features</h2>
         <p>The Cry Analyzer and Diaper Check use Apple's on-device AI (Apple Intelligence). Your recordings, photos, and the results are processed on your device. We do not receive them.</p>
-        <p>The Product Scanner reads label photos on your device. On iOS 27 it may send the label text and your child's age and allergies (never photos) to Apple Private Cloud Compute to write its explanation. Apple says data sent to Private Cloud Compute is used only to answer the request, isn't stored, and can't be accessed by Apple. We never receive it.</p>
-        <p>Text written by AI is marked "AI" in the App, and the App tells you before its first AI feature runs. Scan scores come from a rulebook based on US guidance, not from AI. Labels in languages other than English aren't scored.</p>
+        <h3>Product Scanner</h3>
+        <p>When you scan a product, the App sends the label photos (up to 2; version 2.0 of the App sent up to 3) to our scan server, which passes them to OpenAI to read the label and translate it if needed. To write the report's summary, the App then sends, the same way: the label text; the product's name, brand and category; the result and the guidance it matched; your child's age in months (and corrected age, if you said they were born early); and, if the label lists something on your child's allergy list, that one allergen. It never sends your child's name, birthday or full allergy list. Our server doesn't store photos or label text. It keeps only what it needs to prevent abuse: an anonymous key for this install of the App, created by Apple's App Attest, and counts of scans per day and per month, deleted within about 3 months. If you scan the same photos again within a day, the App reuses the earlier reading, which it keeps only in memory on your device.</p>
+        <p>OpenAI processes the photos and text under its API terms: it doesn't use them to train its models and keeps them for up to 30 days to monitor abuse, then deletes them, unless the law requires it to keep them longer. See <a href="https://openai.com/policies/row-privacy-policy/">OpenAI's privacy policy</a>. Our scan server runs on Supabase.</p>
+        <p>Without a connection, phones with Apple Intelligence read the label on your device instead. If OpenAI can't write the summary, it may be written by Apple Private Cloud Compute, which Apple says uses data only to answer the request and doesn't store it, or on your device.</p>
+        <p>Text written by AI is marked in the App, and the App says which features use AI before you use them. Scan scores come from a rulebook based on US guidance, not from AI. Labels in other languages are scored from an English translation.</p>
         <p>AI results are general information, not a medical diagnosis. Always contact your pediatrician with health concerns. Diaper Check isn't offered in the European Union, the European Economic Area, the United Kingdom or Switzerland.</p>
 
         <h2>Purchases</h2>
@@ -84,11 +87,11 @@
         <p>The Community button opens a Facebook group in your browser or the Facebook app. Anything you do there is governed by Facebook's privacy policy, not this one.</p>
 
         <h2>If You Live Outside the United States</h2>
-        <p>The App is available in many countries and works the same way everywhere: what you enter stays on your device, and we don't receive it. Because we don't collect or hold your personal data, there is nothing for us to access, correct, export or delete on our side; you control it in the App and can delete it all by deleting the App. Under laws such as the EU and UK General Data Protection Regulation, you can still contact us with any privacy question or request at the address below, and you can complain to your local data protection authority.</p>
+        <p>The App is available in many countries and works the same way everywhere: what you enter stays on your device, and we don't receive it, except what a product scan sends as described above. Product label scans pass through our scan server (Supabase) to OpenAI, which may process them outside your country, including in the United States; we keep no photos or label text, only the anonymous install key and scan counts described above. You control everything else in the App and can delete it all by deleting the App. Under laws such as the EU and UK General Data Protection Regulation, you can still contact us with any privacy question or request at the address below, and you can complain to your local data protection authority.</p>
         <p>Purchases and Private Cloud Compute are handled by Apple under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</p>
 
         <h2>Children's Privacy</h2>
-        <p>The App is for parents and caregivers and is not directed at children. Information you enter about your baby stays on your device, and we do not collect it.</p>
+        <p>The App is for parents and caregivers and is not directed at children. Information you enter about your baby stays on your device, and we do not collect it. Product scans send label photos, label text, your child's age in months and the other scan details described above, never your child's name or birthday.</p>
 
         <h2>Your Choices and Deleting Your Data</h2>
         <p>You can edit or delete tracking entries in the App. To delete the App's data, delete the App from your device. You can turn off microphone, camera, photo, and notification access at any time in your device's Settings.</p>
