@@ -42,7 +42,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: October 14, 2026</p>
+        <p class="updated">Last updated: October 15, 2026</p>
 
         <h2>Overview</h2>
         <p>LittleFoot Baby ("the App") is published by Pomegranate Planning, LLC ("we", "us"). The App is built so your family's information stays on your device. We don't require an account. The one exception is the Product Scanner, which sends label photos through our scan server to OpenAI to read them, as described below.</p>
@@ -60,15 +60,21 @@
         <p>This information is not sent to us. It is not shared with anyone else, except as noted under AI Features and Product Scanner. It may be included in your device backups (for example iCloud Backup), which Apple manages under its own privacy policy.</p>
 
         <h2>Microphone</h2>
-        <p>The Cry Analyzer uses the microphone only while you are recording. The audio is analyzed in real time on your device and is never saved or sent anywhere. Only the analysis results are kept, on your device.</p>
+        <p>The Cry Analyzer uses the microphone only while you are recording. The audio is analyzed in real time on your device and is never saved or sent anywhere. Only measurements of the sound are sent to write the notes (see Cry Analyzer and Diaper Check). The results are kept on your device.</p>
 
         <h2>Camera and Photos</h2>
-        <p>The App uses the camera or your photo library only when you take or choose a photo: a profile photo, a diaper check, or a product label scan. Profile and diaper check photos are processed on your device and are never uploaded. Product label photos are sent to OpenAI to read the label (see Product Scanner) and are saved in the App on your device. Links to brand websites and web searches in scan reports open in your browser only when you tap them.</p>
+        <p>The App uses the camera or your photo library only when you take or choose a photo: a profile photo, a diaper check, or a product label scan. Profile and diaper check photos are processed on your device and are never uploaded; Diaper Check sends only color readings from the photo (see Cry Analyzer and Diaper Check). Product label photos are sent to OpenAI to read the label (see Product Scanner) and are saved in the App on your device. Links to brand websites and web searches in scan reports open in your browser only when you tap them.</p>
 
         <h2>AI Features</h2>
-        <p>The Cry Analyzer and Diaper Check use Apple's on-device AI (Apple Intelligence). Your recordings, photos, and the results are processed on your device. We do not receive them.</p>
+        <h3>Cry Analyzer and Diaper Check</h3>
+        <p>The recording and the diaper photo stay on your device. The App measures them on your device, then sends only those measurements, the same way as a product scan, to OpenAI to write the notes:</p>
+        <ul>
+            <li>Cry Analyzer: measurements of the sound (such as pitch, loudness and rhythm), the kinds of sounds detected, your child's age in days, the time of day, a short summary of earlier results, and the list of possible needs for that age.</li>
+            <li>Diaper Check: color readings from the photo, your child's age in days, the feeding type, and the texture you picked.</li>
+        </ul>
+        <p>It never sends the recording, the photo, or your child's name or birthday. Without a connection, phones with Apple Intelligence write the notes on your device instead. The results are kept on your device.</p>
         <h3>Product Scanner</h3>
-        <p>When you scan a product, the App sends the label photos (up to 2) to our scan server, which passes them to OpenAI to read the label and translate it if needed. To write the report's summary, the App then sends, the same way: the label text; the product's name, brand and category; the result and the guidance it matched; your child's age in months (and corrected age, if you said they were born early); and, if the label lists something on your child's allergy list, that one allergen. It never sends your child's name, birthday or full allergy list. Our server doesn't store photos or label text. It keeps only what it needs to prevent abuse: an anonymous key for this install of the App, created by Apple's App Attest, and counts of scans per day and per month, deleted within about 3 months. If you scan the same photos again within a day, the App reuses the earlier reading, which it keeps only in memory on your device.</p>
+        <p>When you scan a product, the App sends the label photos (up to 2) to our scan server, which passes them to OpenAI to read the label and translate it if needed. To write the report's summary, the App then sends, the same way: the label text; the product's name, brand and category; the result and the guidance it matched; your child's age in months (and corrected age, if you said they were born early); and, if the label lists something on your child's allergy list, that one allergen. It never sends your child's name, birthday or full allergy list. Our server doesn't store photos or label text. It keeps only what it needs to prevent abuse: an anonymous key for this install of the App, created by Apple's App Attest, and counts of scans and of Cry Analyzer and Diaper Check notes per day and per month, deleted within about 3 months. If you scan the same photos again within a day, the App reuses the earlier reading, which it keeps only in memory on your device.</p>
         <p>OpenAI processes the photos and text under its API terms: it doesn't use them to train its models and keeps them for up to 30 days to monitor abuse, then deletes them, unless the law requires it to keep them longer. See <a href="https://openai.com/policies/row-privacy-policy/">OpenAI's privacy policy</a>. Our scan server runs on Supabase.</p>
         <p>Without a connection, phones with Apple Intelligence read the label on your device instead. If OpenAI can't write the summary, it may be written by Apple Private Cloud Compute, which Apple says uses data only to answer the request and doesn't store it, or on your device.</p>
         <p>Text written by AI is marked in the App, and the App says which features use AI before you use them. Scan scores come from a rulebook based on US guidance, not from AI. Labels in other languages are scored from an English translation.</p>
@@ -87,7 +93,7 @@
         <p>The Community button opens a Facebook group in your browser or the Facebook app. Anything you do there is governed by Facebook's privacy policy, not this one.</p>
 
         <h2>If You Live Outside the United States</h2>
-        <p>The App is available in many countries and works the same way everywhere: what you enter stays on your device, and we don't receive it, except what a product scan sends as described above. Product label scans pass through our scan server (Supabase) to OpenAI, which may process them outside your country, including in the United States; we keep no photos or label text, only the anonymous install key and scan counts described above. You control everything else in the App and can delete it all by deleting the App. Under laws such as the EU and UK General Data Protection Regulation, you can still contact us with any privacy question or request at the address below, and you can complain to your local data protection authority.</p>
+        <p>The App is available in many countries and works the same way everywhere: what you enter stays on your device, and we don't receive it, except what a product scan, Cry Analyzer or Diaper Check sends as described above. These pass through our scan server (Supabase) to OpenAI, which may process them outside your country, including in the United States; we keep no photos, label text or measurements, only the anonymous install key and scan counts described above. You control everything else in the App and can delete it all by deleting the App. Under laws such as the EU and UK General Data Protection Regulation, you can still contact us with any privacy question or request at the address below, and you can complain to your local data protection authority.</p>
         <p>Purchases and Private Cloud Compute are handled by Apple under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</p>
 
         <h2>Children's Privacy</h2>
